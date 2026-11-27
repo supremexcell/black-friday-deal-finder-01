@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/black-friday-deal-finder-01/supremexcell/black-friday-deal-finder-01/rank.svg)](https://make.fun/bounty/black-friday-deal-finder-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=black-friday-deal-finder-01)
 [![reward](https://make.fun/badge/black-friday-deal-finder-01/supremexcell/black-friday-deal-finder-01/reward.svg)](https://make.fun/bounty/black-friday-deal-finder-01?utm_source=github&utm_medium=readme&utm_campaign=black-friday-deal-finder-01)
 
-A real Black Friday deal finder: **51 deals, $7,052.54 of total savings, 35% average discount** — every price checked live at the linked store on 27 Nov 2026.
+A real Black Friday deal finder: **51 deals, $7,003.60 of total savings, 35% average discount** — every price checked live at the linked store on 27 Nov 2026, and every deal links to its exact product page (v2).
 
 ## What it does
 
@@ -18,7 +18,7 @@ A real Black Friday deal finder: **51 deals, $7,052.54 of total savings, 35% ave
 
 ## How the deals were verified
 
-Each deal was checked live on 27 Nov 2026 (09:40–09:48 UTC) at the linked store page or a cited deal source (Best Buy, Amazon, Walmart, Target, Home Depot, Nike, CNN Underscored, DealNews, Tom's Guide, 9to5Toys and others). Product names that sounded like future models (MacBook Neo, MacBook Pro M6, Apple Watch Series 12, AirPods Max 2, iPad mini A20 Pro OLED, Echo Show 11, Roomba Max 715, LG B6E, TCL S4CF, Hisense H5R1, Galaxy Watch 8, Galaxy Tab S10 FE, DJI Mini 3, GoPro HERO13) were each confirmed as real, shipping products before inclusion. Where an exact listing link could not be confirmed, the deal links to the store's search page instead — no product link is guessed. The Nike Air Force 1 price ($64) is the in-cart price with code BFRIDAY.
+Each deal was checked live on 27 Nov 2026 (09:40–09:48 UTC) at the linked store page or a cited deal source (Best Buy, Amazon, Walmart, Target, Home Depot, Nike, CNN Underscored, DealNews, Tom's Guide, 9to5Toys and others). Product names that sounded like future models (MacBook Neo, MacBook Pro M6, Apple Watch Series 12, AirPods Max 2, iPad mini A20 Pro OLED, Echo Show 11, Roomba Max 715, LG B6E, TCL S4CF, Hisense H5R1, Galaxy Watch 8, Galaxy Tab S10 FE, DJI Mini 3, GoPro HERO13) were each confirmed as real, shipping products before inclusion. In v2 the same day (11:38–11:58 UTC) every store-search link was replaced with the exact product page — 19 same-store links plus the Shark FlexStyle, which moved to SharkNinja's own product page (list $349.99) — and three prices were updated to the live price: Ninja CREAMi NC301 $169.95 → $199.00 (signal lowered to ROUTINE), LEGO Ferrari SF-24 $15 → $15.39, Dyson V15 Detect $599 → $598.50. The Monopoly Harry Potter Walmart link was resolved in a live browser session. No product link is guessed. The Nike Air Force 1 price ($64) is the in-cart price with code BFRIDAY.
 
 ## Run it
 
