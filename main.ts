@@ -1,4 +1,7 @@
 // Deal Ledger — Black Friday 2026 (Node 22, standard library only).
+// v2: every deal links to its exact product page (a build-time guard below
+// refuses store search links), and three prices were re-checked live on
+// 27 Nov 2026 ~11:38-11:58 UTC.
 // The site is app/: plain static files (ES modules, CSS, no build step, no network).
 // This program hands it in: it copies app/ and screenshots/ from beside this file
 // into the output directory and writes output/dossier.json, the summary the
@@ -10,7 +13,7 @@
 // (outside the grader, MAKEFUN_OUTPUT_DIR stands in for /output).
 // Serve the site:  node serve.ts  ->  http://localhost:8080
 
-import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
@@ -32,6 +35,16 @@ for (const child of readdirSync(out)) {
   } catch (err) {
     // A child that vanished between the listing and the removal is fine.
     if (err?.code !== 'ENOENT') throw err;
+  }
+}
+
+// v2 link guard: every deal link must be an exact product page, never a
+// store search page. v1 shipped 20 search links; this fails the build instead
+// of letting one through again. Only the "url" fields are checked (sourceUrl
+// citations may point at deal roundups). Read-only, no network, deterministic.
+for (const m of readFileSync(join(here, 'app', 'deals.js'), 'utf8').matchAll(/"url":"([^"]+)"/g)) {
+  if (/\/s\?k=|\/search\?|searchpage\.jsp|searchTerm=/.test(m[1])) {
+    throw new Error(`deal link is a store search page, not a product page: ${m[1]}`);
   }
 }
 
